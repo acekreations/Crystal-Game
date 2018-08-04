@@ -1,0 +1,77 @@
+body {
+  color: #fff;
+}
+
+#bg {
+  min-height: 100vh;
+  background-image: url(../images/cave-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#titleContainer {
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 100px;
+}
+#titleContainer h1{
+  font-family: 'Macondo Swash Caps', cursive;
+  font-size: 5em;
+}
+
+#numContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-bottom: 80px;
+}
+#numContainer h1{
+  font-size: 5em;
+}
+
+.numBg {
+  padding: 0px;
+  margin: 5px 30px;
+  border-radius: 15px;
+  width: 300px;
+  height: 177px;
+  background-image: url(../images/mining-cart.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numBg h1 {
+  margin-bottom: 45px;
+  font-family: 'Macondo Swash Caps', cursive;
+}
+
+#crystalsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70px;
+}
+
+#crystalsContainer img{
+  max-width: 150px;
+  margin: 10px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#crystalsContainer img:hover {
+  max-width: 170px;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 550px) {
+  #titleContainer h1{
+    font-size: 3em;
+  }
+}
