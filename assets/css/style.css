@@ -1,5 +1,7 @@
 body {
   color: #fff;
+  font-family: 'Macondo Swash Caps', cursive;
+  text-align: center;
 }
 
 #bg {
@@ -16,7 +18,6 @@ body {
   margin-bottom: 100px;
 }
 #titleContainer h1{
-  font-family: 'Macondo Swash Caps', cursive;
   font-size: 5em;
 }
 
@@ -48,7 +49,6 @@ body {
 }
 .numBg h1 {
   margin-bottom: 45px;
-  font-family: 'Macondo Swash Caps', cursive;
 }
 
 #crystalsContainer {
@@ -68,6 +68,48 @@ body {
 .crystalBtn:hover {
   max-width: 170px;
   margin: 0px;
+}
+
+.overlay {
+  height: 240px;
+  width: 500px;
+  margin: 0px auto;
+  position: absolute;
+  top: calc(50vh - 120px);
+  left: calc(50vw - 250px);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-image: url(../images/wood-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.8);
+  border: 5px solid rgba(62, 36, 22, 1);
+  font-family: 'Macondo Swash Caps', cursive;
+}
+
+#gameWin {
+  display: none;
+}
+
+#gameLost {
+  display: none;
+}
+
+#statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+#statsContainer h3 {
+  margin: 0px 10px;
 }
 
 @media only screen and (max-width: 550px) {

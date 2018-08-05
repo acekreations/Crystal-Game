@@ -16,6 +16,22 @@
     <div id="bg" class="container-fluid">
       <div class="conatiner">
 
+        <div id="gameWin" class="overlay">
+          <h2 class="display-3 mb-5">YOU WON!</h2>
+          <div class="btn-group" role="group" aria-label="">
+            <button type="button" class="btn btn-light btn-lg keepPlaying">Keep Playing</button>
+            <button type="button" class="btn btn-light btn-lg resetGame">Reset Game</button>
+          </div>
+        </div>
+
+        <div id="gameLost" class="overlay">
+          <h2 class="display-3 mb-5">YOU LOST :(</h2>
+          <div class="btn-group" role="group" aria-label="">
+            <button type="button" class="btn btn-light btn-lg keepPlaying">Keep Playing</button>
+            <button type="button" class="btn btn-light btn-lg resetGame">Reset Game</button>
+          </div>
+        </div>
+
         <div id="titleContainer">
           <h1>CRYSTAL MINER</h1>
         </div>
@@ -35,6 +51,12 @@
           <img class="crystalBtn" src="assets/images/crystal-orange.png" alt="">
           <img class="crystalBtn" src="assets/images/crystal-red.png" alt="">
         </div>
+
+        <div id="statsContainer">
+          <h3>Wins: <span id="gamesWon">0</span></h3>
+          <h3>Losses: <span id="gamesLost">0</span></h3>
+        </div>
+        <button class="btn btn-light mt-4" type="button" name="button">Reset Game</button>
 
       </div>
     </div>
