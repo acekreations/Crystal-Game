@@ -35,18 +35,23 @@ $(document).ready(function(){
     $("#userTotal").text(userTotal);
   }
 
+  function displayWinsLoses() {
+    $("#gamesWon").text(gamesWon);
+    $("#gamesLost").text(gamesLost);
+  }
+
   function checkWinLose() {
     if (userTotal === targetNum) {
       gameLock = true;
       gamesWon++;
       $("#gameWin").css("display", "flex");
-      $("#gamesWon").text(gamesWon);
+      displayWinsLoses();
     }
     else if (userTotal > targetNum) {
       gameLock = true;
       gamesLost++;
       $("#gameLost").css("display", "flex");
-      $("#gamesLost").text(gamesLost);
+      displayWinsLoses();
     }
   }
 
@@ -66,6 +71,19 @@ $(document).ready(function(){
     gameLock = false;
   }
 
+  function gameReset() {
+    userTotal = 0;
+    targetNum = 0;
+    gameLock = false;
+    gamesWon = 0;
+    gamesLost = 0;
+    setTargetNum();
+    setCrystalBtnVal();
+    displayUserTotal();
+    displayWinsLoses();
+    $("#gameWin, #gameLost").css("display", "none");
+  }
+
   setTargetNum();
   setCrystalBtnVal();
 
@@ -81,6 +99,10 @@ $(document).ready(function(){
 
   $(".keepPlaying").on("click", function(){
     nextGame();
+  })
+
+  $(".resetGame").on("click", function(){
+    gameReset();
   })
 
 
