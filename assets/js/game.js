@@ -45,12 +45,14 @@ $(document).ready(function(){
       gameLock = true;
       gamesWon++;
       $("#gameWin").css("display", "flex");
+      $("#gameWin").addClass("zoomIn");
       displayWinsLoses();
     }
     else if (userTotal > targetNum) {
       gameLock = true;
       gamesLost++;
       $("#gameLost").css("display", "flex");
+      $("#gameLost").addClass("zoomIn");
       displayWinsLoses();
     }
   }
@@ -82,10 +84,11 @@ $(document).ready(function(){
     displayUserTotal();
     displayWinsLoses();
     $("#gameWin, #gameLost").css("display", "none");
+    $("#gameWin, #gameLost").removeClass("zoomIn");
   }
 
-  setTargetNum();
-  setCrystalBtnVal();
+  //Initialize game when page loads
+  gameReset();
 
   //ACTIONS
 
@@ -105,8 +108,9 @@ $(document).ready(function(){
     gameReset();
   })
 
-
-
-
+  //Enable Bootstrap Popover
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
 
 })
