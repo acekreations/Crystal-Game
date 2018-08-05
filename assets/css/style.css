@@ -59,13 +59,13 @@ body {
   min-height: 70px;
 }
 
-#crystalsContainer img{
+.crystalBtn {
   max-width: 150px;
   margin: 10px 10px;
   cursor: pointer;
   transition: all 0.2s;
 }
-#crystalsContainer img:hover {
+.crystalBtn:hover {
   max-width: 170px;
   margin: 0px;
 }
